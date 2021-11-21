@@ -1,2 +1,2 @@
 import '..'
-export { Demo } from './Demo'
+export * from './Demo'

@@ -18,7 +18,7 @@ export class Chart<TType extends ChartType, TData, TLabel = string> extends LitE
 
 	protected updated(changedProperties: PropertyValues<this>) {
 		const shallUpgradeChart = Array.from(changedProperties.keys())
-			.some(key => Chart.chartRelatedProperties.includes(key as any))
+			.some(key => Chart.chartRelatedProperties.includes(key as keyof typeof Chart.prototype))
 
 		if (shallUpgradeChart) {
 			this.upgradeChart()

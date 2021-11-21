@@ -123,9 +123,6 @@
 				"noUselessIndex": true
 			}
 		],
-		"import/no-internal-modules": [
-			"error"
-		],
 		"import/no-duplicates": "error",
 		"no-console": "error",
 		"space-before-blocks": "error",

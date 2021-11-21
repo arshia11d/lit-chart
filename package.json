@@ -1,8 +1,7 @@
 {
-	"name": "@arshia11d/lit-chart",
-	"version": "0.0.1",
+	"name": "@a11d/lit-chart",
+	"version": "0.1.0",
 	"description": "Lit-based Web Components for chart.js",
-	"main": "index.ts",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/arshia11d/lit-chart.git"
@@ -19,19 +18,28 @@
 		"url": "https://github.com/arshia11d/lit-chart/issues"
 	},
 	"homepage": "https://github.com/arshia11d/lit-chart#readme",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist/index.js",
+		"dist/index.d.ts",
+		"dist/src"
+	],
 	"scripts": {
-		"start": "snowpack dev"
+		"start": "snowpack dev",
+		"prepare": "tsc"
 	},
 	"dependencies": {
 		"chart.js": "3.*",
 		"lit": "*"
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^4.23.0",
-		"@typescript-eslint/parser": "^4.23.0",
-		"eslint": "^7.26.0",
-		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-lit": "^1.4.0",
-		"snowpack": "3.*"
+		"@typescript-eslint/eslint-plugin": "*",
+		"@typescript-eslint/parser": "*",
+		"eslint": "*",
+		"eslint-plugin-import": "*",
+		"eslint-plugin-lit": "*",
+		"snowpack": "*"
 	}
 }

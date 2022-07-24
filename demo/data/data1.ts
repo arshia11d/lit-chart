@@ -14,3 +14,16 @@ export const dataSets: Array<ChartDataset> = [
 		borderColor: 'red',
 	},
 ]
+
+export const dataSets2: Array<ChartDataset> = [
+	{
+		label: 'Increasing',
+		data: [1, 2, 3, 4],
+		borderColor: 'teal',
+	},
+	{
+		label: 'Decreasing',
+		data: [4, 3, 2, 1],
+		borderColor: 'red',
+	},
+]

@@ -1,10 +1,9 @@
-import { LitElement, html } from 'lit'
-import { customElement } from 'lit/decorators.js'
+import { Component, component, html } from '@a11d/lit'
 import { labels, dataSets } from './data/data1'
 
-@customElement('lit-chart-demo')
-export class Demo extends LitElement {
-	protected render() {
+@component('lit-chart-demo')
+export class Demo extends Component {
+	protected override get template() {
 		return html`
 			<style>
 				:host {
@@ -22,6 +21,8 @@ export class Demo extends LitElement {
 			</style>
 
 			<div>
+				<lit-chart-doughnut .labels=${labels} .dataSets=${dataSets}></lit-chart-doughnut>
+
 				<lit-chart-line .labels=${labels} .dataSets=${dataSets}></lit-chart-line>
 				<lit-chart-bar .labels=${labels} .dataSets=${dataSets}></lit-chart-bar>
 				<lit-chart-bubble .labels=${labels} .dataSets=${dataSets}></lit-chart-bubble>

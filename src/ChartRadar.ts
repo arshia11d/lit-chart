@@ -3,7 +3,7 @@ import { Chart } from './Chart'
 
 @customElement('lit-chart-radar')
 export class ChartRadar<TData, TLabel = string> extends Chart<'radar', TData, TLabel> {
-	readonly type = 'radar'
+	override readonly type = 'radar'
 }
 
 declare global {

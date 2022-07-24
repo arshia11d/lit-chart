@@ -23,16 +23,15 @@
 	"types": "dist/index.d.ts",
 	"files": [
 		"dist/index.js",
-		"dist/index.d.ts",
-		"dist/src"
+		"dist/index.d.ts"
 	],
 	"scripts": {
-		"start": "snowpack dev",
-		"prepare": "tsc"
+		"start": "webpack serve --mode=development",
+		"build": "tsc"
 	},
 	"dependencies": {
-		"chart.js": "3.*",
-		"lit": "*"
+		"@a11d/lit": "*",
+		"chart.js": "3.*"
 	},
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "*",
@@ -40,6 +39,10 @@
 		"eslint": "*",
 		"eslint-plugin-import": "*",
 		"eslint-plugin-lit": "*",
-		"snowpack": "*"
+		"ts-loader": "*",
+		"html-webpack-plugin": "*",
+		"webpack": "*",
+		"webpack-cli": "*",
+		"webpack-dev-server": "*"
 	}
 }

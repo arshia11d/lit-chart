@@ -3,7 +3,7 @@ import { Chart } from './Chart'
 
 @customElement('lit-chart-scatter')
 export class ChartScatter<TData, TLabel = string> extends Chart<'scatter', TData, TLabel> {
-	readonly type = 'scatter'
+	override readonly type = 'scatter'
 }
 
 declare global {

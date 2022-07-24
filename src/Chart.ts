@@ -1,9 +1,8 @@
-import { LitElement, html, PropertyValues } from 'lit'
-import { customElement, property, query } from 'lit/decorators.js'
+import { component, Component, html, property, PropertyValues, query } from '@a11d/lit'
 import { Chart as ChartJS, ChartDataset, ChartOptions, ChartType, Plugin } from 'chart.js'
 
-@customElement('lit-chart')
-export class Chart<TType extends ChartType, TData, TLabel = string> extends LitElement {
+@component('lit-chart')
+export class Chart<TType extends ChartType, TData, TLabel = string> extends Component {
 	private static readonly chartRelatedProperties = new Array<keyof typeof Chart.prototype>('type', 'labels', 'dataSets', 'options', 'plugins')
 
 	@property({ type: String }) type!: ChartType
@@ -16,7 +15,7 @@ export class Chart<TType extends ChartType, TData, TLabel = string> extends LitE
 
 	@property({ type: Array }) plugins?: Array<Plugin<TType>>
 
-	protected updated(changedProperties: PropertyValues<this>) {
+	protected override updated(changedProperties: PropertyValues<this>) {
 		const shallUpgradeChart = Array.from(changedProperties.keys())
 			.some(key => Chart.chartRelatedProperties.includes(key as keyof typeof Chart.prototype))
 
@@ -32,7 +31,7 @@ export class Chart<TType extends ChartType, TData, TLabel = string> extends LitE
 
 	@query('canvas') protected readonly canvasElement!: HTMLCanvasElement
 
-	protected render() {
+	protected override get template() {
 		return html`
 			<style>
 				:host {

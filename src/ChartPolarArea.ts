@@ -3,7 +3,7 @@ import { Chart } from './Chart'
 
 @customElement('lit-chart-polar-area')
 export class ChartPolarArea<TData, TLabel = string> extends Chart<'polarArea', TData, TLabel> {
-	readonly type = 'polarArea'
+	override readonly type = 'polarArea'
 }
 
 declare global {

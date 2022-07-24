@@ -3,7 +3,7 @@ import { Chart } from './Chart'
 
 @customElement('lit-chart-line')
 export class ChartLine<TData, TLabel = string> extends Chart<'line', TData, TLabel> {
-	readonly type = 'line'
+	override readonly type = 'line'
 }
 
 declare global {

@@ -3,7 +3,7 @@ import { Chart } from './Chart'
 
 @customElement('lit-chart-bubble')
 export class ChartBubble<TData, TLabel = string> extends Chart<'bubble', TData, TLabel> {
-	readonly type = 'bubble'
+	override readonly type = 'bubble'
 }
 
 declare global {
